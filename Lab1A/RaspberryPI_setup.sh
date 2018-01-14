@@ -34,7 +34,7 @@ iface wlan0 inet static
       netmask 255.255.255.0
       wireless-channel 3
       wireless-essid RPi-AdHocNet
-      wireless-mode ad-hoc" > /etc/network/interface-adhoc'
+      wireless-mode ad-hoc" > /etc/network/interfaces-adhoc'
 
     sudo touch /etc/dhcp/dhcpd.conf-adhoc
     sudo sh -c 'echo "default-lease-time 600;
@@ -69,7 +69,7 @@ fi
 # Step 4 - Setup Pi as an access point
 if [ $1 == 4 ]; then
     sudo cp /etc/dhcp/dhcpd.conf /etc/dhcp/dhcpd.conf-wifi
-    sudo cp /etc/network/interface-adhoc /etc/network/interface
+    sudo cp /etc/network/interfaces-adhoc /etc/network/interface
     sudo cp /etc/dhcp/dhcpd.conf-adhoc /etc/dhcp/dhcpd.conf
     sudo ip link set wlan0 down
     sudo ip link set wlan0 up

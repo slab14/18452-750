@@ -50,6 +50,7 @@ fi
 
 # Step 3 - Install standard packages & enable SSH
 if [ $1 == 3 ]; then
+    sudo apt-get update -y
     sudo apt-get install -y python python-dev python-pip emacs vim \
 	 iperf3 nmap python-ipaddress python-subprocess32 \
 	 apt-transport-https ca-certificates \

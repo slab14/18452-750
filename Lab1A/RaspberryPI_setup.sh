@@ -73,6 +73,7 @@ if [ $1 == 4 ]; then
     sudo cp /etc/dhcp/dhcpd.conf-adhoc /etc/dhcp/dhcpd.conf
     sudo ip link set wlan0 down
     sudo ip link set wlan0 up
+    sudo touch /etc/default/isc-dhcp-server-adhoc
     sudo sh -c 'echo "INTERFACESv4="wlan0">/etc/default/isc-dhcp-server-adhoc'
     sudo cp /etc/default/isc-dhcp-server /etc/default/isc-dhcp-server-orig
     sudo cp /etc/default/isc-dhcp-server-adhoc /etc/default/isc-dhcp/server

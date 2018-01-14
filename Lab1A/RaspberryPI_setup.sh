@@ -8,7 +8,7 @@
 # Invocation example ./RaspberryPI_setup.sh STEP# PI#
 
 # Step 1a - Get latest software
-if [ $1 == 1]; then
+if [ $1 == 1 ]; then
     sudo apt-get update -y
     sudo apt-get dist-upgrade -y
     sudo reboot
@@ -30,7 +30,7 @@ iface eth0 inet dhcp
 
 auto wlan0
 iface wlan0 inet static
-      address 192.168.1.$2
+      address 192.168.1.1
       netmask 255.255.255.0
       wireless-channel 3
       wireless-essid RPi-AdHocNet

@@ -23,7 +23,7 @@ fi
 # Step 2 - Setup *.conf files for static IP address for the PI
 if [ $1 == 3 ]; then
     sudo cp /etc/network/interfaces /etc/network/interfaces-wifi
-    sudo touch /etc/network/interface-adhoc
+    sudo touch /etc/network/interfaces-adhoc
     sudo sh -c 'echo "auto lo 
 iface lo inet loopback 
 iface eth0 inet dhcp
@@ -38,7 +38,7 @@ iface wlan0 inet static
 
     sudo cp /etc/dhcp/dhcpd.conf /etc/dhcp/dhcpd.conf-wifi
     sudo touch /etc/dhcp/dhcpd.conf-adhoc
-    sudo sh -c 'echo "dfault-lease-time 600;
+    sudo sh -c 'echo "default-lease-time 600;
 max-lease-time 7200;
 ddns-update-style interim;
 authoritative;

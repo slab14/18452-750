@@ -79,6 +79,7 @@ if [ $1 == 4 ]; then
     sudo cp /etc/default/isc-dhcp-server /etc/default/isc-dhcp-server-orig
     sudo cp /etc/default/isc-dhcp-server-adhoc /etc/default/isc-dhcp-server
     sudo service isc-dhcp-server restart
+    sudo reboot
 fi
 
 

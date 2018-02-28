@@ -26,7 +26,7 @@ figure;
 for i = 1:1:12
     csi = get_scaled_csi(csi_trace{i});
     subplot(3,4,i); plot(db(abs(squeeze(csi).')));grid on;
-    title(['Time ',num2str(csi_trace{i}.timestamp_low-T0),' sec']);
+    title(['Time ',num2str(csi_trace{i}.timestamp_low-T0),' \mu sec']);
     xlabel('Subcarrier index');
     ylabel('SNR [dB]');
     %set(gca,'fontsize',14);
